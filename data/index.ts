@@ -39,6 +39,16 @@ export const homeItems = [
     height: "h-60",
     bg: "bg-neutral-100 dark:bg-neutral-800",
   },
+  {
+    id: 2,
+    title: "The",
+    description: "First rule of F Club",
+    imageSrc:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    width: "md:col-span-1",
+    height: "h-60",
+    bg: "bg-neutral-100 dark:bg-neutral-800",
+  },
   // {
   //   id: 2,
   //   title: "First",

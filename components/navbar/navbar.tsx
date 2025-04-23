@@ -13,6 +13,7 @@ import {
 import { navItems } from "@/data";
 import { useState } from "react";
 import Link from "next/link"; // Import Link dari Next.js
+import DarkModeToggle from "./dark-mode-toggle";
 
 export default function CustomNavbar({
   children,
@@ -33,7 +34,7 @@ export default function CustomNavbar({
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
+            <DarkModeToggle />
             <NavbarButton variant="primary">{actionButton.name}</NavbarButton>
           </div>
         </NavBody>
@@ -42,10 +43,13 @@ export default function CustomNavbar({
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+            <div className="flex items-center gap-2">
+              <DarkModeToggle />
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </div>
           </MobileNavHeader>
 
           <MobileNavMenu
@@ -63,13 +67,6 @@ export default function CustomNavbar({
               </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
-              {/* <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton> */}
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
@@ -82,7 +79,6 @@ export default function CustomNavbar({
         </MobileNav>
       </Navbar>
       {children}
-      {/* Navbar */}
     </div>
   );
 }

@@ -1,28 +1,40 @@
 "use client";
-
-import SummaryCard from "@/components/cards/summary-card";
-import { homeItems } from "@/data";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 export default function Home() {
-  return <Content />;
+  return (
+    <BackgroundBeamsWithCollision>
+      <TextFlip />
+    </BackgroundBeamsWithCollision>
+  );
 }
 
-const Content = () => {
+// Component
+const TextFlip = () => {
+  const words = ["Frontend", "Backend", "Fullstack"];
   return (
-    <div className="container mx-auto p-8 pt-24">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 w-full h-full">
-        {homeItems.map((box) => (
-          <div key={box.id} className="flex">
-            <SummaryCard
-              title={box.title}
-              description={box.description}
-              imageSrc={box.imageSrc}
-              width={box.width}
-              height={box.height}
-            />
-          </div>
-        ))}
+    <motion.h1
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      className={cn(
+        "relative mb-6 max-w-2xl text-left text-4xl leading-normal font-bold tracking-tight text-zinc-700 md:text-7xl dark:text-zinc-100"
+      )}
+      layout
+    >
+      <div className="inline-block">
+        Hi, I'm a <ContainerTextFlip words={words} /> Developer
+        <p className="text-base md:text-lg mt-4 font-normal text-zinc-600 dark:text-zinc-400 tracking-wider">
+          I turn ideas into scalable, maintainable products. Crafting apps with
+          Next.js & NestJS.
+        </p>
       </div>
-    </div>
+    </motion.h1>
   );
 };

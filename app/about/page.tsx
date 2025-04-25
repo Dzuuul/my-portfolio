@@ -1,12 +1,10 @@
 "use client";
 
-import SummaryCard from "@/components/cards/summary-card";
-import { about } from "@/data";
+import FeaturesSectionDemo from "@/components/features-section-demo-3";
 import React from "react";
 
 export default function About() {
-  const { title, description, imageSrc } = about;
   return (
-    <SummaryCard title={title} description={description} imageSrc={imageSrc} />
+    <FeaturesSectionDemo />
   );
 }

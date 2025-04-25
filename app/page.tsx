@@ -32,7 +32,7 @@ const TextFlip = () => {
         layout
       >
         <div className="inline-block">
-          Hi, I'm a <ContainerTextFlip words={words} /> Developer
+          Hi, I&apos;m a <ContainerTextFlip words={words} /> Developer
           <p className="text-base md:text-lg mt-4 font-normal text-zinc-600 dark:text-zinc-400 tracking-wider">
             I turn ideas into scalable, maintainable products. Crafting apps
             with Next.js & NestJS.

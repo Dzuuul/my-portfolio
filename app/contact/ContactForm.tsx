@@ -60,7 +60,7 @@ export default function ContactForm() {
       <p className="mt-10 max-w-sm text-base text-neutral-600 dark:text-neutral-300">
         Not a fan of forms?{" "}
         <span className="font-bold italic px-1 rounded bg-yellow-200 dark:bg-yellow-300 dark:text-amber-950">
-          The dock's
+          The dock&apos;s
         </span>{" "}
         always hanging out down below — hit an icon to reach me on socials!
       </p>

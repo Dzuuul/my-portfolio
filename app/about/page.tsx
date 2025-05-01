@@ -3,7 +3,8 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Grid } from "../contact/GridBackground";
-import Image from "next/image";
+import animationData from "@/public/animations/bearded-male.json";
+import Lottie from "lottie-react";
 
 export default function About() {
   return (
@@ -25,14 +26,11 @@ export default function About() {
             .
           </p>
           <div className="mt-7 relative flex items-center justify-center">
-            <div className="w-[300px] h-[300px] relative">
-              <Image
-                src="/profile-pic.png"
-                alt="Fikri"
-                fill
-                className="rounded-lg object-cover"
-              />
-            </div>
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              className="w-100 h-100"
+            />
           </div>
         </div>
         <div className="relative shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black overflow-hidden">

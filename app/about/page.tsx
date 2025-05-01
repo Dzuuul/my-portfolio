@@ -4,7 +4,8 @@ import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Grid } from "../contact/GridBackground";
 import animationData from "@/public/animations/bearded-male.json";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function About() {
   return (

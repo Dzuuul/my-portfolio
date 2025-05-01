@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import Lottie from "lottie-react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import animationData from "@/public/animations/male-with-jetpack.json";
 import { FloatingDockSocialMedia } from "./FloatingDock";
 import ContactForm from "./ContactForm";
 import { Grid } from "./GridBackground";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Contact() {
   return (

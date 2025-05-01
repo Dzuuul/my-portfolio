@@ -2,9 +2,10 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { cn } from "@/lib/utils";
-import Lottie from "lottie-react";
 import { motion } from "motion/react";
 import animationData from "@/public/animations/male-profile.json";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Home() {
   return (

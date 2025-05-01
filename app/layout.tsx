@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "@/components/client-wrapper";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_META_TITLE,
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <ClientWrapper>{children}</ClientWrapper>
+        <ThemeProvider attribute="class">
+          <ClientWrapper>{children}</ClientWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );

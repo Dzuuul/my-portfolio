@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        <ThemeProvider attribute="class">
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ClientWrapper>{children}</ClientWrapper>
         </ThemeProvider>
       </body>
